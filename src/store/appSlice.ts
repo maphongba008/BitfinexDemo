@@ -15,6 +15,12 @@ export const appSlice = createSlice({
   reducers: {
     setConnectionState: (state, action) => {
       state.connectionState = action.payload;
+      if (state.connectionState === "disconnected") {
+        state.book = {
+          asks: {},
+          bids: {},
+        };
+      }
     },
     handleMessageReceived: (state, action) => {
       const data = action.payload;

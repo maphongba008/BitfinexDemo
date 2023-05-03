@@ -6,4 +6,6 @@ export const dimensions = {
 
 export const colors = {
   appBackground: "#FFF",
+  border: "grey",
+  button: "#03A9F4",
 };
