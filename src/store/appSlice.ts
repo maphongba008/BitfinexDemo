@@ -22,11 +22,6 @@ export const appSlice = createSlice({
         };
       }
     },
-    handleMessageReceived: (state, action) => {
-      const data = action.payload;
-      const book = state.book;
-      handleDataEvent(book, data);
-    },
     handleBulkMessagesReceived: (state, action) => {
       const data = action.payload;
       const book = state.book;
@@ -35,11 +30,8 @@ export const appSlice = createSlice({
   },
 });
 
-export const {
-  handleMessageReceived,
-  handleBulkMessagesReceived,
-  setConnectionState,
-} = appSlice.actions;
+export const { handleBulkMessagesReceived, setConnectionState } =
+  appSlice.actions;
 
 export default appSlice.reducer;
 

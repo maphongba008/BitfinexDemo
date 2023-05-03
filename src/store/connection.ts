@@ -1,9 +1,5 @@
 import _ from "lodash";
-import {
-  handleBulkMessagesReceived,
-  handleMessageReceived,
-  setConnectionState,
-} from "./appSlice";
+import { handleBulkMessagesReceived, setConnectionState } from "./appSlice";
 import { globalDispatch } from "./dispatcher";
 
 const wsHost = "wss://api-pub.bitfinex.com/ws/2";
@@ -88,7 +84,6 @@ export const startWs = ({
       return;
     }
     if (typeof possibleArray[0] === "number") {
-      // globalDispatch(handleMessageReceived(possibleArray));
       console.log("new book event");
       handleEvent(possibleArray);
     }

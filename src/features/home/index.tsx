@@ -15,7 +15,6 @@ import { startWs, stopWs } from "../../store/connection";
 import React from "react";
 import { OrderBookView } from "./component/OrderBookView";
 import { colors, dimensions } from "../../appConstants";
-console.log("home here");
 
 const possiblePrecs = ["P0", "P1", "P2", "P3", "P4"];
 
